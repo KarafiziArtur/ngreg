@@ -10,16 +10,16 @@ app.run(['$rootScope', '$location', firstRun]);
 
 function firstRun($rootScope, $location) {
     $rootScope.$on('$routeChangeError',
-        function(event, next, prev, error) {
+        function(event, next, previous, error) {
             if (error == 'AUTH_REQUIRED') {
                 $location.path('/login');
             }
         });
 }
 
-app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', configurateRoutes]);
+app.config(['$urlRouterProvider', '$stateProvider', configurateRoutes]);
 
-function configurateRoutes($urlRouterProvider, $stateProvider, $locationProvider) {
+function configurateRoutes($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/login');
     $stateProvider
         .state('login', {
