@@ -1,0 +1,14 @@
+<div class="branding">
+    <a ui-sref="success">AngularJS</a>
+</div>
+<ul>
+    <li ui-sref-active="active" ng-hide="currentUser">
+        <a ui-sref="login">Login</a>
+    </li>
+    <li ui-sref-active="active" ng-hide="currentUser">
+        <a ui-sref="register">Register</a>
+    </li>
+    <li ui-sref-active="active" ng-show="currentUser">
+        <a ui-sref="success">User info</a>
+    </li>
+</ul>
