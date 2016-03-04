@@ -20,7 +20,7 @@ function firstRun($rootScope, $location) {
 app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', configurateRoutes]);
 
 function configurateRoutes($urlRouterProvider, $stateProvider, $locationProvider) {
-    $urlRouterProvider.otherwise('/success');
+    $urlRouterProvider.otherwise('/login');
     $stateProvider
         .state('login', {
             url: '/login',
